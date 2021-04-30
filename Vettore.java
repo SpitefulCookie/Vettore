@@ -47,15 +47,23 @@ public class Vettore{
     @Override
     public String toString(){
 
-        String buffer="Valori: ";
+        String buffer="";
 
         for(int i = 0; i< this.valori.size(); i++){
 
-            buffer.concat(String.valueOf(this.valori.get(i))+" ");
+            //buffer.concat(String.valueOf(this.valori.get(i))+" ");
+
+			 buffer += String.valueOf(this.valori.get(i));
+
+			 if(i!=this.valori.size()-1){
+				 
+				 buffer += ", ";
+
+			 }
 
         }
 
-        return buffer;
+		return buffer;
 
     }
 

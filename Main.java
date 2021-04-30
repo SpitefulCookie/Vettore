@@ -77,7 +77,7 @@ public class Main {
 
                     }
 
-                    System.out.println("Il vettore con il modulo minore è ["+ vettori.get(indiceMin)+"] \nModulo: ("+min+").");
+                    System.out.println("Il vettore con il modulo minore è ["+ vettori.get(indiceMin).toString() +"] \nModulo: ("+min+").");
                     
                 } else if(input.toUpperCase().startsWith("MAX")){
                     
@@ -105,7 +105,7 @@ public class Main {
 
                     }
 
-                    System.out.println("Il vettore con il modulo minore è ["+ vettori.get(indiceMax)+"] \nModulo: ("+max+").");
+                    System.out.println("Il vettore con il modulo minore è ["+ vettori.get(indiceMax)+"] \nModulo: ("+ max +").");
                     
                 }
     
@@ -116,6 +116,18 @@ public class Main {
             }
         
         } while(!input.toUpperCase().equals("EXIT"));
+
+		try{
+
+			br.close();
+
+		}catch (IOException e){
+
+			e.printStackTrace();
+
+		}
+		
+		System.out.println("Uscita programma");
 
     }
 
